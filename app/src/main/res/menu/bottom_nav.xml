@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/lyricsFeedFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/txt_feed"/>
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/txt_favorite"/>
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/txt_search"/>
+
+</menu>
