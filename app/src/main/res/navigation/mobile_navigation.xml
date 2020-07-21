@@ -3,33 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/currentWeatherFragment">
-
+    app:startDestination="@id/feedFragment">
     <fragment
-        android:id="@+id/currentWeatherFragment"
-        android:name="com.resocoder.forecastmvvm.ui.weather.current.CurrentWeatherFragment"
-        android:label="current_weather_fragment"
-        tools:layout="@layout/current_weather_fragment" />
+        android:id="@+id/feedFragment"
+        android:name="com.android.lyricsapp.modules.feed.FeedFragment"
+        android:label="feed_fragment"
+        tools:layout="@layout/feed_fragment" />
     <fragment
-        android:id="@+id/futureListWeatherFragment"
-        android:name="com.resocoder.forecastmvvm.ui.weather.future.list.FutureListWeatherFragment"
-        android:label="future_list_weather_fragment"
-        tools:layout="@layout/future_list_weather_fragment" >
-        <action
-            android:id="@+id/actionDetail"
-            app:destination="@id/futureDetailWeatherFragment" />
-    </fragment>
+        android:id="@+id/favoritesFragment"
+        android:name="com.android.lyricsapp.modules.favorites.FavoritesFragment"
+        android:label="favorites_fragment"
+        tools:layout="@layout/favorites_fragment" />
     <fragment
-        android:id="@+id/futureDetailWeatherFragment"
-        android:name="com.resocoder.forecastmvvm.ui.weather.future.detail.FutureDetailWeatherFragment"
-        android:label="future_detail_weather_fragment"
-        tools:layout="@layout/future_detail_weather_fragment" >
-        <argument
-            android:name="dateString"
-            app:argType="string" />
-    </fragment>
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.resocoder.forecastmvvm.ui.settings.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:id="@+id/searchFragment"
+        android:name="com.android.lyricsapp.modules.search.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" />
 </navigation>

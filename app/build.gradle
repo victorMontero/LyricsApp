@@ -110,6 +110,12 @@ dependencies {
 
     implementation "com.google.android.material:material:$material_version"
 
+    // OkHttp3
+    def okHttp_version = "3.14.9"
+
+    implementation "com.squareup.okhttp3:okhttp:$okHttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp_version"
+
     
 
 
