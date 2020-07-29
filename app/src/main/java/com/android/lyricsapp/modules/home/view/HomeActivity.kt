@@ -24,6 +24,7 @@ class HomeActivity : AppCompatActivity() {
 
         NavigationUI.setupActionBarWithNavController(this, navController)
 
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
