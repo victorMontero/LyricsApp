@@ -2,6 +2,7 @@ package com.android.lyricsapp.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(
     tableName = "news"
@@ -16,4 +17,4 @@ data class News (
     var urlToImage: String? = null,
     var url: String? = null,
     var publishedAt: String? = null
-)
+): Serializable
