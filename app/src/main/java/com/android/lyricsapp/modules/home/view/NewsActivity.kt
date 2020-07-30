@@ -1,28 +1,28 @@
 package com.android.lyricsapp.modules.home.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.android.lyricsapp.R
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_news.*
 
-class HomeActivity : AppCompatActivity() {
+class NewsActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_news)
         setSupportActionBar(toolbar)
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
 
-        bottom_nav.setupWithNavController(navController)
+        bottom_navigation_view.setupWithNavController(navController)
 
-        NavigationUI.setupActionBarWithNavController(this, navController)
+        //NavigationUI.setupActionBarWithNavController(this, navController)
 
 
     }

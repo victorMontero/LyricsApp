@@ -1,6 +1,7 @@
 package com.android.lyricsapp.model
 
-class Source {
 
-    var name: String? = null
-}
+data class Source (
+
+    val name: String
+)
