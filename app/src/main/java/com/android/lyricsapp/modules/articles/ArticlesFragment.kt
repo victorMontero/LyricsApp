@@ -1,15 +1,20 @@
 package com.android.lyricsapp.modules.articles
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.android.lyricsapp.R
+import com.android.lyricsapp.modules.home.view.NewsActivity
+import com.android.lyricsapp.modules.home.viewmodel.NewsViewModel
 
 class ArticlesFragment : Fragment(R.layout.articles_fragment) {
 
+    lateinit var viewModel: NewsViewModel
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = (activity as NewsActivity).viewModel
+    }
 
 
 }
