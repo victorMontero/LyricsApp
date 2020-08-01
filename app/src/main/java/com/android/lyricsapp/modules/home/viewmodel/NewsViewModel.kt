@@ -3,6 +3,7 @@ package com.android.lyricsapp.modules.home.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.android.lyricsapp.model.News
 import com.android.lyricsapp.model.NewsResponse
 import com.android.lyricsapp.repository.NewsRepository
 import com.android.lyricsapp.util.Resource
@@ -15,12 +16,14 @@ class NewsViewModel(
 
     val news: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var newsPage = 1
+    var newsResponse : NewsResponse? = null
 
     val searchNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var searchNewsPage = 1
+    var searchNewsResponse : NewsResponse? = null
 
     init {
-        getNews("ca")
+        getNews("br")
     }
 
     fun getNews(countryCode: String) = viewModelScope.launch {
@@ -29,16 +32,24 @@ class NewsViewModel(
         news.postValue(handleNewsResponse(response))
     }
 
-    fun searchNews(searcQuery: String) = viewModelScope.launch {
+    fun searchNews(searchQuery: String) = viewModelScope.launch {
         searchNews.postValue(Resource.Loading())
-        val response = newsRepository.searchNews(searcQuery, searchNewsPage)
+        val response = newsRepository.searchNews(searchQuery, searchNewsPage)
         searchNews.postValue(handleSearchNewsResponse(response))
     }
 
     private fun handleNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse>{
         if(response.isSuccessful){
             response.body()?.let { resultResponse ->
-                return Resource.Success(resultResponse)
+                newsPage++
+                if(newsResponse == null){
+                    newsResponse = resultResponse
+                } else {
+                    val oldArticles = newsResponse?.articles
+                    val newArticles = resultResponse.articles
+                    oldArticles?.addAll(newArticles)
+                }
+                return Resource.Success(newsResponse ?: resultResponse)
             }
         }
         return Resource.Error(response.message())
@@ -47,10 +58,28 @@ class NewsViewModel(
     private fun handleSearchNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse>{
         if(response.isSuccessful){
             response.body()?.let { resultResponse ->
-                return Resource.Success(resultResponse)
+                searchNewsPage++
+                if(searchNewsResponse == null){
+                    searchNewsResponse = resultResponse
+                } else {
+                    val oldArticles = searchNewsResponse?.articles
+                    val newArticles = resultResponse.articles
+                    oldArticles?.addAll(newArticles)
+                }
+                return Resource.Success(searchNewsResponse ?: resultResponse)
             }
         }
         return Resource.Error(response.message())
+    }
+
+    fun saveNews(news: News) = viewModelScope.launch {
+        newsRepository.upsert(news)
+    }
+
+    fun getSavedNews() = newsRepository.getSavedNews()
+
+    fun deleteNews(news: News) = viewModelScope.launch {
+        newsRepository.deleteNews(news)
     }
 
 

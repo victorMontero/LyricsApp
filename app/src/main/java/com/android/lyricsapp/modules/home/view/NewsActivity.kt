@@ -31,12 +31,6 @@ class NewsActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
         bottom_navigation_view.setupWithNavController(navController)
 
-        //NavigationUI.setupActionBarWithNavController(this, navController)
-
-
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return NavigationUI.navigateUp(navController, null)
-    }
 }

@@ -1,5 +1,6 @@
 package com.android.lyricsapp.model
 
 data class NewsResponse (
-    var articles: List<News>? = null
+    var articles: MutableList<News>,
+    val totalResults: Int
 )

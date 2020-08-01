@@ -10,11 +10,11 @@ import java.io.Serializable
 data class News (
 
     @PrimaryKey(autoGenerate = true)
-    var id: Int? = null,
-    var title: String? = null,
-    var description: String? = null,
-    var source: Source? = null,
-    var urlToImage: String? = null,
-    var url: String? = null,
-    var publishedAt: String? = null
+    var id: Int?,
+    var title: String?,
+    var description: String?,
+    var source: Source?,
+    var urlToImage: String?,
+    var url: String?,
+    var publishedAt: String?
 ): Serializable

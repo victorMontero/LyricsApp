@@ -51,5 +51,9 @@
         android:id="@+id/articlesFragment"
         android:name="com.android.lyricsapp.modules.articles.ArticlesFragment"
         android:label="articles_fragment"
-        tools:layout="@layout/articles_fragment" />
+        tools:layout="@layout/articles_fragment" >
+        <argument
+            android:name="news"
+            app:argType="com.android.lyricsapp.model.News" />
+    </fragment>
 </navigation>
