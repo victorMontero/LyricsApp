@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AbsListView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -55,7 +56,7 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
                 is com.android.lyricsapp.util.Resource.Error -> {
                     hideProgressBar()
                     response.message?.let { message ->
-                        Log.e(TAG, "An error occoured: $message")
+                        Toast.makeText(activity, "an error occurred: $message", Toast.LENGTH_LONG).show()
                     }
                 }
                 is com.android.lyricsapp.util.Resource.Loading -> {
