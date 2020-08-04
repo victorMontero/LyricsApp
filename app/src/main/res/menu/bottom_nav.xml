@@ -3,15 +3,18 @@
 
     <item
         android:id="@+id/feedFragment"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_fedd"
+        android:iconTint="@color/detailsDarkColor"
         android:title="@string/txt_feed"/>
     <item
         android:id="@+id/favoritesFragment"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_favorites"
+        android:iconTint="@color/detailsDarkColor"
         android:title="@string/txt_favorite"/>
     <item
         android:id="@+id/searchFragment"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_search"
+        android:iconTint="@color/detailsDarkColor"
         android:title="@string/txt_search"/>
 
 </menu>

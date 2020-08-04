@@ -7,11 +7,17 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.android.lyricsapp.R
+import com.android.lyricsapp.extension.categoryStringSize
+import com.android.lyricsapp.extension.convertToCalendar
+import com.android.lyricsapp.extension.formatToEnCa
 import com.android.lyricsapp.model.News
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_news.view.*
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+
+    private val NUMBER_CHARACTER = 40
+
 
     inner class NewsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
@@ -48,8 +54,9 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         holder.itemView.apply {
             Glide.with(this).load(news.urlToImage).into(item_image)
             item_source.text = news.source?.name ?: "newsApp"
-            item_date.text = news.publishedAt
-            item_headline.text = news.description
+            item_date.text = news.publishedAt?.convertToCalendar()?.formatToEnCa()
+            item_headline.text = news.title?.categoryStringSize(NUMBER_CHARACTER)
+            item_headline.text = news.title?.categoryStringSize(NUMBER_CHARACTER)
             setOnClickListener{
                 onItemClickListener?.let { it(news) }
             }

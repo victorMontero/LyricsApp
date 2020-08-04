@@ -32,7 +32,7 @@ class NewsViewModel(
     var searchNewsResponse: NewsResponse? = null
 
     init {
-        getNews("br")
+        getNews("ca")
     }
 
     fun getNews(countryCode: String) = viewModelScope.launch {

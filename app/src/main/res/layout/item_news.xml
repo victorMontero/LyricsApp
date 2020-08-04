@@ -7,7 +7,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/constraint_item_news"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/item_news_card_view"
@@ -16,6 +16,7 @@
         android:layout_margin="8dp"
         app:cardCornerRadius="10dp"
         android:elevation="2dp"
+        android:background="@color/detailsDarkColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +30,7 @@
         <ImageView
             android:id="@+id/item_image"
             android:layout_width="0dp"
-            android:layout_height="160dp"
+            android:layout_height="140dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +60,7 @@
             android:id="@+id/item_view"
             android:layout_width="0dp"
             android:layout_height="3dp"
-            android:background="@android:color/holo_orange_dark"
+            android:background="@color/primaryColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/item_image" />
@@ -71,7 +72,7 @@
             android:layout_margin="8dp"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="@color/primaryColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,10 +83,11 @@
             android:id="@+id/item_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:textColor="@android:color/holo_green_dark"
-            android:textSize="20sp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
             android:textStyle="bold"
+            android:paddingEnd="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/item_date"
             app:layout_constraintTop_toBottomOf="@id/item_date"
