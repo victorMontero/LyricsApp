@@ -3,4 +3,16 @@
     <string name="txt_feed">feed</string>
     <string name="txt_favorite">favorite news</string>
     <string name="txt_search">search</string>
+    <string name="text_create_activity">create a new user : )</string>
+    <string name="text_first_name">first name</string>
+    <string name="text_last_name">last name</string>
+    <string name="text_email">email</string>
+    <string name="text_password">password</string>
+    <string name="text_create_account">create account</string>
+    <string name="text_welcome">welcome. login or register, it\'s free!</string>
+    <string name="text_forgot_password">forgot password?</string>
+    <string name="text_recover_your_password">recover your password</string>
+    <string name="text_forgot">input your registered email address to creates another password</string>
+    <string name="text_login">login</string>
+    <string name="text_create">create a new account</string>
 </resources>

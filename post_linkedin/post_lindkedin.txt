@@ -1,0 +1,14 @@
+No meu último App Android eu entrei no desenvolvimento em Kotlin, mesmo que em um projeto simples foi bem fácil perceber como essa linguagem é menos verbosa quando comparado com o Java e nesse novo projeto usando recursos mais robustos essa qualidade do Kotlin ficou ainda mais evidente.
+
+Esse app é uma solução que eu criei para o meu própio benefício rs, quando estava vindo para o Canadá senti a necessidade de estar atualizado com as principais notícias que rolam por aqui, com base nessa necessidade eu criei o "NewsEh?", um aplicativo utilizando arquitetura MVVM que faz requisições para a NewsApi.org e entrega as últimas notícias baseados em parâmetros como local, fonte e data.
+
+Um ponto que me chamou bastante a atenção foram as Coroutines e suas "suspending functions", as requisições API em Java e o famoso "Callback Hell" sempre me deixaram de cabelo em pé rs, mas ver que as Coroutines apresentam uma solução assíncrona e que não exige tanto processamento da CPU foi bem positivo.
+
+Esse projeto também conta com recursos como Retrofit, ROOM, RecyclerView com DiffUtil e Pagination que otimiza bastante o volume de informação das respostas que recebemos pela API.
+
+A partir deste post eu vou deixar o link do projeto no GitHub, se vc der olhada e deixar um comentário sobre o projeto ou uma dica sobre qualquer um desses rescursos vai ser bastante positivo pra mim : )
+
+Link: https://github.com/victorMontero/NewsEhApi
+
+#kotlin #android #coroutines #dev
+

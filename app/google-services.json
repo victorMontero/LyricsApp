@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "515866501563",
+    "firebase_url": "https://lyricsapp-8723b.firebaseio.com",
+    "project_id": "lyricsapp-8723b",
+    "storage_bucket": "lyricsapp-8723b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515866501563:android:43fd5382b1208369e9e49e",
+        "android_client_info": {
+          "package_name": "com.android.lyricsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515866501563-k96tf88a4o61lq5jkrgk12qatctjvuqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.lyricsapp",
+            "certificate_hash": "893a5ad644afa59d09569123ad9a7909023f0860"
+          }
+        },
+        {
+          "client_id": "515866501563-g4nresap3lchv7a0fbsegu8cipc2qc6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIpyt25Z0fwMmXzEoLThCQBGuI_wyycYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515866501563-g4nresap3lchv7a0fbsegu8cipc2qc6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
