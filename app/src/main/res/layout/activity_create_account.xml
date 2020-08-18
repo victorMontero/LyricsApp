@@ -51,7 +51,7 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/name_edit_text"
+                android:id="@+id/name_create_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/text_first_name"
@@ -60,22 +60,22 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/last_name_edit_text"
+                android:id="@+id/last_name_create_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/text_last_name"
-                app:layout_constraintEnd_toEndOf="@id/name_edit_text"
-                app:layout_constraintStart_toStartOf="@id/name_edit_text"
-                app:layout_constraintTop_toBottomOf="@id/name_edit_text" />
+                app:layout_constraintEnd_toEndOf="@id/name_create_edit_text"
+                app:layout_constraintStart_toStartOf="@id/name_create_edit_text"
+                app:layout_constraintTop_toBottomOf="@id/name_create_edit_text" />
 
             <EditText
                 android:id="@+id/email_create_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/text_email"
-                app:layout_constraintEnd_toEndOf="@id/last_name_edit_text"
-                app:layout_constraintStart_toStartOf="@id/last_name_edit_text"
-                app:layout_constraintTop_toBottomOf="@id/last_name_edit_text" />
+                app:layout_constraintEnd_toEndOf="@id/last_name_create_edit_text"
+                app:layout_constraintStart_toStartOf="@id/last_name_create_edit_text"
+                app:layout_constraintTop_toBottomOf="@id/last_name_create_edit_text" />
 
             <EditText
                 android:id="@+id/password_create_edit_text"
@@ -91,14 +91,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:layout_marginTop="24dp"
                 android:background="@drawable/shape_button"
                 android:text="@string/text_create_account"
                 android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/password_create_edit_text"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/password_create_edit_text"
-                app:layout_constraintStart_toStartOf="@+id/password_create_edit_text"
-                app:layout_constraintTop_toBottomOf="@+id/password_create_edit_text" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

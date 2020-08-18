@@ -42,8 +42,8 @@ class LoginActivity : AppCompatActivity() {
     private fun setUpFields() {
         createTextView = findViewById<View>(R.id.new_account_login_text) as TextView
         forgotTextView = findViewById<View>(R.id.forgot_login_text) as TextView
-        emailTextView = findViewById<View>(R.id.name_edit_text) as EditText
-        passwordTextView = findViewById<View>(R.id.last_name_edit_text) as EditText
+        emailTextView = findViewById<View>(R.id.email_login_edit_text) as EditText
+        passwordTextView = findViewById<View>(R.id.password_login_edit_text) as EditText
         loginButton = findViewById<Button>(R.id.activity_login_button_confirm_id)
 
         mAuth = FirebaseAuth.getInstance()

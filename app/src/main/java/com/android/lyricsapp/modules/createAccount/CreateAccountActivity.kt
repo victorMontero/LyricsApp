@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.lyricsapp.R
-import com.android.lyricsapp.model.News
 import com.android.lyricsapp.modules.home.view.NewsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -43,8 +42,8 @@ class CreateAccountActivity : AppCompatActivity() {
     }
 
     private fun initialise() {
-        firstNameEditText = findViewById<View>(R.id.name_edit_text) as EditText
-        lastNameEditText = findViewById<View>(R.id.last_name_edit_text) as EditText
+        firstNameEditText = findViewById<View>(R.id.name_create_edit_text) as EditText
+        lastNameEditText = findViewById<View>(R.id.last_name_create_edit_text) as EditText
         emailEditText = findViewById<View>(R.id.email_create_edit_text) as EditText
         passwordEditText = findViewById<View>(R.id.password_create_edit_text) as EditText
         buttonCreate = findViewById<View>(R.id.activity_review_button_confirm_id) as Button

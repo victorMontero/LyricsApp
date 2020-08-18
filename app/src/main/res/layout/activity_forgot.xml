@@ -51,7 +51,7 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/name_edit_text"
+                android:id="@+id/email_forgot_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/text_email"
@@ -61,7 +61,7 @@
 
 
             <Button
-                android:id="@+id/activity_review_button_confirm_id"
+                android:id="@+id/recover_button_confirm_id"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -70,9 +70,9 @@
                 android:text="@string/text_recover_your_password"
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/name_edit_text"
-                app:layout_constraintStart_toStartOf="@+id/name_edit_text"
-                app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
+                app:layout_constraintEnd_toEndOf="@+id/email_forgot_edit_text"
+                app:layout_constraintStart_toStartOf="@+id/email_forgot_edit_text"
+                app:layout_constraintTop_toBottomOf="@+id/email_forgot_edit_text" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

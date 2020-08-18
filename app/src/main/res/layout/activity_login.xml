@@ -49,22 +49,23 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/name_edit_text"
+                android:id="@+id/email_login_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:hint="@string/text_email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/last_name_edit_text"
+                android:id="@+id/password_login_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/text_password"
-                app:layout_constraintEnd_toEndOf="@id/name_edit_text"
-                app:layout_constraintStart_toStartOf="@id/name_edit_text"
-                app:layout_constraintTop_toBottomOf="@id/name_edit_text" />
+                app:layout_constraintEnd_toEndOf="@id/email_login_edit_text"
+                app:layout_constraintStart_toStartOf="@id/email_login_edit_text"
+                app:layout_constraintTop_toBottomOf="@id/email_login_edit_text" />
 
 
             <Button
@@ -77,9 +78,9 @@
                 android:text="@string/text_login"
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/last_name_edit_text"
-                app:layout_constraintStart_toStartOf="@+id/last_name_edit_text"
-                app:layout_constraintTop_toBottomOf="@+id/last_name_edit_text" />
+                app:layout_constraintEnd_toEndOf="@+id/password_login_edit_text"
+                app:layout_constraintStart_toStartOf="@+id/password_login_edit_text"
+                app:layout_constraintTop_toBottomOf="@+id/password_login_edit_text" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
