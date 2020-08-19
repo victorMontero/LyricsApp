@@ -17,4 +17,6 @@
         android:iconTint="@color/detailsDarkColor"
         android:title="@string/txt_search"/>
 
+
+
 </menu>
